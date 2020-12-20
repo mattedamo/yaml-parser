@@ -1,0 +1,10 @@
+replicas: 3
+deployment: "backend"
+spec:
+  caster:
+    martello: "plastello"
+    master:
+      plastel: 22
+      name:
+      - name: "ibuprofene"
+        rinazin: "sprinazale"
