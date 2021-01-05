@@ -7,6 +7,11 @@ images:
   newTag: latest
 kind: Kustomization
 namespace: first-attempt-prod
+patches:
+- path: backend_backend_patch.yaml
+  target:
+    labelSelector: tier=backend
+    name: backend
 secretGenerator:
 - literals:
   - MYSQL_ROOT_PASSWORD=password
