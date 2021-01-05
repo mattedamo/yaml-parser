@@ -16,7 +16,6 @@ def update_deployment(values, kind_name, ns_path, tier):
             patch_deployment(ns_path, k, v, kind_name, tier)
 
 def patch_deployment(ns_path, key, value, kind_name, tier):
-    ns_path = "kustomize/overlay/prod/"
     kustomize_path = ns_path + "kustomization.yaml"
     with open(kustomize_path) as file:
             kustomization = yaml.load(file, Loader=yaml.FullLoader)

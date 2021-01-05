@@ -1,7 +1,7 @@
-ns: "test"
+ns: "prod"
 backend:
   - type: "deployment"
-    replicas: 3
+    replicas: 30
   - type: "service"
     port: 22
 frontend:

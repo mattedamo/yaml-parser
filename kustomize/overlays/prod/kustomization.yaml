@@ -1,19 +1,14 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
-
 bases:
 - ../../base/
-
-
-namespace: first-attempt-prod
-
 images:
 - name: backend
   newName: mattedamo26/first-attempt
   newTag: latest
-
+kind: Kustomization
+namespace: first-attempt-prod
 secretGenerator:
-- name: db-config
-  literals:
-    - MYSQL_ROOT_PASSWORD=password
-    - MYSQL_DATABASE=thesisAppMariadb
+- literals:
+  - MYSQL_ROOT_PASSWORD=password
+  - MYSQL_DATABASE=thesisAppMariadb
+  name: db-config
