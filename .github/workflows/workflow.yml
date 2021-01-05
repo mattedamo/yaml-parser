@@ -27,6 +27,7 @@ jobs:
          
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Action"
+          git add -A
           git commit -am "update kustomize"
        
       - name: Push changes
