@@ -6,18 +6,17 @@ metadata:
     app: thesis-app
     tier: db
 spec:
-  replicas: 1
   selector:
     matchLabels:
       app: thesis-app
       tier: db
-  replicas: 1
   template:
     metadata:
       labels:
         app: thesis-app
         tier: db
     spec:
+      hostname: mariadb
       containers:
         - image: mariadb:latest
           name: mariadb

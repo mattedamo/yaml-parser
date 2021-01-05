@@ -4,18 +4,16 @@ kind: Kustomization
 resources:
 - ../../base
 
-namespace: first-attempt-test
-
-patchesStrategicMerge:
+namespace: first-attempt-dev
 
 
 images:
 - name: backend
-  newName: mattedamo26/first-attempt-test
+  newName: mattedamo26/first-attempt-dev
   newTag: latest
 
 secretGenerator:
 - name: db-config
   literals:
   - MYSQL_ROOT_PASSWORD=password
-  - MYSQL_DATABASE=test
+  - MYSQL_DATABASE=dev

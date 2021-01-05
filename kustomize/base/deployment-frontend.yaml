@@ -2,15 +2,14 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend
-  labels:
+  labels: 
     app: thesis-app
-    tier: frontend 
+    tier: frontend
 spec:
   selector:
     matchLabels:
       app: thesis-app
       tier: frontend
-  replicas: 1
   template:
     metadata:
       labels:
@@ -20,5 +19,6 @@ spec:
       containers:
       - name: frontend
         image: "mattedamo26/first-attempt-frontend"
+        imagePullPolicy: Always        
         ports:
           - containerPort: 80
