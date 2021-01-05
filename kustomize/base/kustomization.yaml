@@ -1,0 +1,17 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- deployment-backend.yaml
+- deployment-database.yaml
+- service-backend.yaml
+- service-database.yaml
+- deployment-frontend.yaml
+- service-frontend.yaml
+namespace: thesis-microservices-app-first-attempt
+images:
+- name: backend
+  newName: mattedamo26/first-attempt-backend
+  newTag: ce7c4d1fa9b7eefa73cf08ff212a89f630c3c275
+- name: frontend
+  newName: mattedamo26/first-attempt-frontend
+  newTag: 42a2e377ba23645c74a7d008a61c092a939159a0

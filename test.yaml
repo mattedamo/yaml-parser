@@ -1,11 +1,10 @@
-ns: "test"
 backend:
   - type: "deployment"
     replicas: 3
   - type: "service"
-    port: 22
+    port: 33
 frontend:
   - type: "deployment"
-    replicas: 2
-    
-    
+    label: "labello"
+  - type: "service"
+    nodeport: 3333

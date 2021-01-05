@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: mariadb
+  labels:
+    app: thesis-app
+    tier: db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: thesis-app
+      tier: db
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: thesis-app
+        tier: db
+    spec:
+      containers:
+        - image: mariadb:latest
+          name: mariadb
+          ports:
+            - name: http
+              containerPort: 3306

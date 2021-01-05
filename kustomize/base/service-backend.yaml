@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  name: service-backend
+  labels:
+    app: thesis-app
+    tier: backend
+spec:
+  selector:
+    app: thesis-app
+    tier: backend
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
