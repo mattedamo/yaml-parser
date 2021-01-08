@@ -3,7 +3,7 @@ name: run-py-script
 on: 
   push:
     branches:
-      - master
+      - matter
 
 jobs:
   deploy:
@@ -19,7 +19,8 @@ jobs:
         with: 
           python-version: "3.x"
       - run: pip install PyYAML
-      - run: python final-script.py
+      - run: python set-ns.py
+      - run: cat file.yaml
      
        
       - name: Commit files
