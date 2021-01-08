@@ -10,7 +10,7 @@ def main():
         input.update(ns)
     else:
         input["ns"] = os.getenv("NS")
-    print(os.getenv("NS")
+    print(os.getenv("NS"))
     print(input)
     with open("./file", "w") as file:
                 yaml.dump(input, file)
