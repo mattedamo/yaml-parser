@@ -4,9 +4,14 @@ import yaml, os
 def main():
     with open("./file.yaml") as file:
         input = yaml.load(file, Loader=yaml.FullLoader)
-    #prima controllo quale è il namespace e lo rimuovo siccome non mi serve più
-    print(os.environ)
-    input["ns"] = os.getenv("NS")
+    
+    if "ns" in input.keys():
+        ns = { "ns" : os.getenv("NS") }
+        input.update(ns)
+    else:
+        input["ns"] = os.getenv("NS")
+    print(os.getenv("NS")
+    print(input)
     with open("./file", "w") as file:
                 yaml.dump(input, file)
 
