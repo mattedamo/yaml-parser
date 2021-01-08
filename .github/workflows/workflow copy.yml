@@ -11,6 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+      - name: set environment variables
+        uses: allenevans/set-env@v2.0.0
+        with:
+          NS: 'prova'
+      
       - name: Check out code
         uses: actions/checkout@v2
     
