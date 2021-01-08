@@ -1,11 +1,8 @@
-ns: "prod"
 backend:
-  - type: "deployment"
-    replicas: 30
-  - type: "service"
-    port: 22
+- replicas: 30
+  type: deployment
+- port: 22
+  type: service
 frontend:
-  - type: "deployment"
-    replicas: 2
-    
-    
+- replicas: 2
+  type: deployment
