@@ -26,6 +26,6 @@ jobs:
         with: 
           python-version: "3.x"
       #- run: pip install PyYAML
-      #- run: python set-ns.py
+      - run: python print-env.py
       #- run: cat file.yaml
     
