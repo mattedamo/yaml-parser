@@ -1,8 +1,8 @@
-import yaml, os
+import os
 
 
 def main():
-    print(os.environ())
+    print(os.environ)
     print(os.getenv("NS"))
 if __name__ == '__main__':
     main()
